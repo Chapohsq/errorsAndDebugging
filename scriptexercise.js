@@ -157,7 +157,6 @@ class PartialInvalidStringError extends Error {
         this.partialResult = partialResult
     }
 }
-
 // try {
 //     Parser.stringparser(csvString2)
 // } catch (error) {
@@ -166,5 +165,29 @@ class PartialInvalidStringError extends Error {
 //         newArray = error.partialResult
 //     }
 // }
+//console.log(Parser.stringparser(csvString2)); 
 
-console.log(Parser.stringparser(csvString2)); 
+/*"12; 13; 45; 23\n
+2.1; 13; 34; 21\n
+3.2; 12; 4; 22\n" 
+[]fullarray with no splits or newlines (do json stringify?)
+then each newline creates a new subarray (matrix)
+
+"name; age; school; grade\n
+pippo; 13; colombo; 3\n
+pluto; 12; leopardi; 2\n
+paperino; 11; bertani; 2\n"
+[{name: "pippo", age: 13, school: "colombo", grade: 3},{pluto},{paperino}] (must be something with json most likely)
+*/
+
+
+let list = "12; 13; 45; 23\n2.1; 13; 34; 21\n3.2; 12; 4; 22\n" 
+ 
+function newparse1(string) { 
+    let parsedArray1 = []
+    let stringNumber1 = string
+    stringNumber1 = string.replace(" ", "")
+    parsedArray1 = stringNumber1.split(";")
+}
+
+console.log(newparse1(list));
