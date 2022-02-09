@@ -42,7 +42,7 @@ function parseStringToNumber(string) {
         stringNumber = string.replace(",", ".")
     }
     const number = parseFloat(stringNumber)
-    if (isNan(number)) {
+    if (isNaN(number)) {
         throw new Error ("stringa non valida")
     }
     return number;
@@ -50,7 +50,7 @@ function parseStringToNumber(string) {
 
 let age = parseStringToNumber("13");
 
-if (isNan(age)) {
+if (isNaN(age)) {
     console.log("non sono riuscito a convertire");
 }else{
 console.log("age:", age);
