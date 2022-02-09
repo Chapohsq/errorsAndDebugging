@@ -113,6 +113,11 @@ let csvString3 = "a; b; c; 5; d; f; false; 960"
 let csvString4 = ""
 
 class Parser {
+    /**
+     * The function takes a string as an argument and returns an array of numbers  //AI DOC WRITER, CTRL+.
+     * @param {string} string - the string that will be parsed
+     * @returns Nothing.
+     */
     static stringparser(string) {
         let parsedArray = []
         let stringNumber = string
@@ -153,11 +158,13 @@ class PartialInvalidStringError extends Error {
     }
 }
 
-try {
-    Parser.stringparser(csvString2)
-} catch (error) {
-    console.log(error.message);
-    if (error instanceof PartialInvalidStringError) {
-        newArray = error.partialResult
-    }
-}
+// try {
+//     Parser.stringparser(csvString2)
+// } catch (error) {
+//     console.log(error.message);
+//     if (error instanceof PartialInvalidStringError) {
+//         newArray = error.partialResult
+//     }
+// }
+
+console.log(Parser.stringparser(csvString2)); 
