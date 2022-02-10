@@ -183,11 +183,11 @@ paperino; 11; bertani; 2\n"
 
 let list = "12; 13; 45; 23\n2.1; 13; 34; 21\n3.2; 12; 4; 22\n" 
  
-function newparse1(string) { 
-    let parsedArray1 = []
-    let stringNumber1 = string
-    stringNumber1 = string.replace(" ", "")
-    parsedArray1 = stringNumber1.split(";")
+function newparse1(string) { debugger;
+    string = string.replace(/(\r\n|\n|\r)/gm,"");
+    let stringWithoutBreaks = string;
+    stringWithoutBreaks = stringWithoutBreaks.replace(" ", "");
+    //parsedArray1 = stringNumber1.split(";")
 }
 
 console.log(newparse1(list));
